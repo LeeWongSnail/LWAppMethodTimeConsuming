@@ -14,7 +14,8 @@
 		EB4BABAC24B03F350076AC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4BABAB24B03F350076AC34 /* Assets.xcassets */; };
 		EB4BABAF24B03F350076AC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4BABAD24B03F350076AC34 /* LaunchScreen.storyboard */; };
 		EB4BABB224B03F350076AC34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABB124B03F350076AC34 /* main.m */; };
-		EB4BABBB24B03FD80076AC34 /* BLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABB924B03FD80076AC34 /* BLStopwatch.m */; };
+		EB4BABBF24B041890076AC34 /* LWTimeConsumingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABBE24B041890076AC34 /* LWTimeConsumingManager.m */; };
+		EB4BABC224B04BA70076AC34 /* LWFileLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABC124B04BA70076AC34 /* LWFileLogManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,11 @@
 		EB4BABAE24B03F350076AC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB4BABB024B03F350076AC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4BABB124B03F350076AC34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EB4BABB924B03FD80076AC34 /* BLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStopwatch.m; sourceTree = "<group>"; };
-		EB4BABBA24B03FD80076AC34 /* BLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStopwatch.h; sourceTree = "<group>"; };
+		EB4BABBD24B041890076AC34 /* LWTimeConsumingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWTimeConsumingManager.h; sourceTree = "<group>"; };
+		EB4BABBE24B041890076AC34 /* LWTimeConsumingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWTimeConsumingManager.m; sourceTree = "<group>"; };
+		EB4BABC024B04BA70076AC34 /* LWFileLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWFileLogManager.h; sourceTree = "<group>"; };
+		EB4BABC124B04BA70076AC34 /* LWFileLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWFileLogManager.m; sourceTree = "<group>"; };
+		EB4BABC624B083620076AC34 /* LWTimeConsumingDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWTimeConsumingDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,7 @@
 		EB4BAB9E24B03F340076AC34 /* LWAppMethodTimeConsuming */ = {
 			isa = PBXGroup;
 			children = (
-				EB4BABB824B03FC20076AC34 /* StopWatch */,
+				EB4BABBC24B0401E0076AC34 /* TimeConsuming */,
 				EB4BAB9F24B03F340076AC34 /* AppDelegate.h */,
 				EB4BABA024B03F340076AC34 /* AppDelegate.m */,
 				EB4BABA224B03F340076AC34 /* SceneDelegate.h */,
@@ -80,13 +84,16 @@
 			path = LWAppMethodTimeConsuming;
 			sourceTree = "<group>";
 		};
-		EB4BABB824B03FC20076AC34 /* StopWatch */ = {
+		EB4BABBC24B0401E0076AC34 /* TimeConsuming */ = {
 			isa = PBXGroup;
 			children = (
-				EB4BABBA24B03FD80076AC34 /* BLStopwatch.h */,
-				EB4BABB924B03FD80076AC34 /* BLStopwatch.m */,
+				EB4BABBD24B041890076AC34 /* LWTimeConsumingManager.h */,
+				EB4BABBE24B041890076AC34 /* LWTimeConsumingManager.m */,
+				EB4BABC024B04BA70076AC34 /* LWFileLogManager.h */,
+				EB4BABC124B04BA70076AC34 /* LWFileLogManager.m */,
+				EB4BABC624B083620076AC34 /* LWTimeConsumingDef.h */,
 			);
-			path = StopWatch;
+			path = TimeConsuming;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4BABA724B03F340076AC34 /* ViewController.m in Sources */,
+				EB4BABBF24B041890076AC34 /* LWTimeConsumingManager.m in Sources */,
 				EB4BABA124B03F340076AC34 /* AppDelegate.m in Sources */,
 				EB4BABB224B03F350076AC34 /* main.m in Sources */,
-				EB4BABBB24B03FD80076AC34 /* BLStopwatch.m in Sources */,
 				EB4BABA424B03F340076AC34 /* SceneDelegate.m in Sources */,
+				EB4BABC224B04BA70076AC34 /* LWFileLogManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +311,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 75Z5J6L7KD;
 				INFOPLIST_FILE = LWAppMethodTimeConsuming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +322,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uxin.timeline.LWAppMethodTimeConsuming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = kilauniversally_debug;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -320,7 +331,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 75Z5J6L7KD;
 				INFOPLIST_FILE = LWAppMethodTimeConsuming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uxin.timeline.LWAppMethodTimeConsuming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = kilauniversally_debug;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

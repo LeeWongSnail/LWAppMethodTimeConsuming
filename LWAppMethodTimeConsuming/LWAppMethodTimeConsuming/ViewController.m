@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LWTimeConsumingManager.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [LWTimeConsumingManager start];
+    //
+    for (NSInteger index = 0; index < 100; index++) {
+        NSLog(@"____");
+    }
+    [LWTimeConsumingManager addTimeConsumingEventWithDescription:@"1111for循环执行结束"];
+    for (NSInteger index = 0; index < 1000; index++) {
+          NSLog(@"____");
+    }
+    [LWTimeConsumingManager addTimeConsumingEventWithDescription:@"2222for循环执行结束"];
+    for (NSInteger index = 0; index < 10000; index++) {
+            NSLog(@"____");
+    }
+    [LWTimeConsumingManager stop];
+
 }
 
 
