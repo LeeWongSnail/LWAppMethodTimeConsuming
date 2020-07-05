@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LWAppMethodTimeConsuming'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'OC时间耗时方法统计,支持控制台输出写文件和弹窗提示'
 
 # This description is used to generate tags and improve search results.
