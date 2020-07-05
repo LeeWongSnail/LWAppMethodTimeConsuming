@@ -96,6 +96,9 @@
         cancelButtonTitle:@"确定"
         otherButtonTitles:nil] show];
     }
+    if (self.recordLogMethod & LWAppTimeConsumingManagerRecordLogMethodFile) {
+        [self.fileManager addFileLogWihtContent:@"-------------------------------阶段统计结束-----------------------------"];
+    }
 }
 
 
