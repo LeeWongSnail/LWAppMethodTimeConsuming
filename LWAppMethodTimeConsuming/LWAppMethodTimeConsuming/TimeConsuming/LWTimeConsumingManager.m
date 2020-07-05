@@ -81,9 +81,7 @@ typedef NS_ENUM(NSUInteger, LWTimeConsumingState) {
     NSTimeInterval temporaryTimeInterval = CACurrentMediaTime();
     CFTimeInterval splitTimeInterval = temporaryTimeInterval - [LWTimeConsumingManager sharedManager].temporaryTimeInterval;
 
-    NSInteger count = [LWTimeConsumingManager sharedManager].mutableSplits.count + 1;
-
-    NSMutableString *finalDescription = [NSMutableString stringWithFormat:@"#%@", @(count)];
+    NSMutableString *finalDescription = [NSMutableString string];
     if (description) {
         [finalDescription appendFormat:@" %@", description];
     }
@@ -96,11 +94,17 @@ typedef NS_ENUM(NSUInteger, LWTimeConsumingState) {
     [self writeLogToFileIfNeed];
 }
 
++ (void)removeHasNotifiyLogs {
+    pthread_mutex_t lock = [LWTimeConsumingManager sharedManager].lock;
+    pthread_mutex_lock(&lock);
+    [[LWTimeConsumingManager sharedManager].mutableSplits removeAllObjects];
+    pthread_mutex_unlock(&lock);
+}
+
 + (void)writeLogToFileIfNeed {
-    NSUInteger count = [LWTimeConsumingManager sharedManager].mutableSplits.count;
-    if (count > 1) {
+    if ([LWTimeConsumingManager sharedManager].logBlock) {
         NSString *content = [[LWTimeConsumingManager sharedManager] prettyPrintedSplits];
-        [[LWTimeConsumingManager sharedManager].fileManger addFileLogWihtContent:content];
+        [LWTimeConsumingManager sharedManager].logBlock(content);
     }
 }
 
@@ -140,7 +144,7 @@ typedef NS_ENUM(NSUInteger, LWTimeConsumingState) {
         [output appendString:mixContent];
     }];
     pthread_mutex_unlock(&_lock);
-
+    [LWTimeConsumingManager removeHasNotifiyLogs];
     return [output copy];
 }
 @end

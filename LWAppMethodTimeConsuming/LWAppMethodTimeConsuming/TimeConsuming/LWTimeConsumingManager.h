@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^LWTimeConsumingManagerLogBlock)(NSString *logMessage);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LWTimeConsumingManager : NSObject
+
+@property (nonatomic, copy) LWTimeConsumingManagerLogBlock logBlock;
+
++ (instancetype)sharedManager;
 
 /// 开始统计
 + (void)start;

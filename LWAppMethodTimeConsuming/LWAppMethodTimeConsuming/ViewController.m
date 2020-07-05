@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LWTimeConsumingManager.h"
+#import "LWAppTimeConsumingManager.h"
 
 @interface ViewController ()
 
@@ -19,20 +19,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [LWTimeConsumingManager start];
+    [LWAppTimeConsumingManager start];
+    [LWAppTimeConsumingManager sharedManager].recordLogMethod =
+    LWAppTimeConsumingManagerRecordLogMethodConsole | LWAppTimeConsumingManagerRecordLogMethodFile | LWAppTimeConsumingManagerRecordLogMethodAlert;
     //
     for (NSInteger index = 0; index < 100; index++) {
         NSLog(@"____");
     }
-    [LWTimeConsumingManager addTimeConsumingEventWithDescription:@"1111for循环执行结束"];
+    [LWAppTimeConsumingManager addTimeConsumingEventWithDescription:@"1111for循环执行结束"];
     for (NSInteger index = 0; index < 1000; index++) {
           NSLog(@"____");
     }
-    [LWTimeConsumingManager addTimeConsumingEventWithDescription:@"2222for循环执行结束"];
+    [LWAppTimeConsumingManager addTimeConsumingEventWithDescription:@"2222for循环执行结束"];
     for (NSInteger index = 0; index < 10000; index++) {
             NSLog(@"____");
     }
-    [LWTimeConsumingManager stop];
+    [LWAppTimeConsumingManager stop];
 
 }
 

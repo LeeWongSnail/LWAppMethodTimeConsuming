@@ -16,6 +16,7 @@
 		EB4BABB224B03F350076AC34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABB124B03F350076AC34 /* main.m */; };
 		EB4BABBF24B041890076AC34 /* LWTimeConsumingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABBE24B041890076AC34 /* LWTimeConsumingManager.m */; };
 		EB4BABC224B04BA70076AC34 /* LWFileLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABC124B04BA70076AC34 /* LWFileLogManager.m */; };
+		EB4BABC924B0D4960076AC34 /* LWAppTimeConsumingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BABC824B0D4960076AC34 /* LWAppTimeConsumingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		EB4BABC024B04BA70076AC34 /* LWFileLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWFileLogManager.h; sourceTree = "<group>"; };
 		EB4BABC124B04BA70076AC34 /* LWFileLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWFileLogManager.m; sourceTree = "<group>"; };
 		EB4BABC624B083620076AC34 /* LWTimeConsumingDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWTimeConsumingDef.h; sourceTree = "<group>"; };
+		EB4BABC724B0D4960076AC34 /* LWAppTimeConsumingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWAppTimeConsumingManager.h; sourceTree = "<group>"; };
+		EB4BABC824B0D4960076AC34 /* LWAppTimeConsumingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWAppTimeConsumingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				EB4BABC024B04BA70076AC34 /* LWFileLogManager.h */,
 				EB4BABC124B04BA70076AC34 /* LWFileLogManager.m */,
 				EB4BABC624B083620076AC34 /* LWTimeConsumingDef.h */,
+				EB4BABC724B0D4960076AC34 /* LWAppTimeConsumingManager.h */,
+				EB4BABC824B0D4960076AC34 /* LWAppTimeConsumingManager.m */,
 			);
 			path = TimeConsuming;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4BABC924B0D4960076AC34 /* LWAppTimeConsumingManager.m in Sources */,
 				EB4BABA724B03F340076AC34 /* ViewController.m in Sources */,
 				EB4BABBF24B041890076AC34 /* LWTimeConsumingManager.m in Sources */,
 				EB4BABA124B03F340076AC34 /* AppDelegate.m in Sources */,
@@ -315,7 +321,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 75Z5J6L7KD;
 				INFOPLIST_FILE = LWAppMethodTimeConsuming/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,7 +341,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 75Z5J6L7KD;
 				INFOPLIST_FILE = LWAppMethodTimeConsuming/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
