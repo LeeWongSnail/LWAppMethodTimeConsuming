@@ -1,0 +1,16 @@
+PODS:
+  - LWAppMethodTimeConsuming (0.1.0)
+
+DEPENDENCIES:
+  - LWAppMethodTimeConsuming (from `../`)
+
+EXTERNAL SOURCES:
+  LWAppMethodTimeConsuming:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LWAppMethodTimeConsuming: e8d2bb12d14e89bc726528f4e6db06d32b3b5cbd
+
+PODFILE CHECKSUM: baacfae1a098ac044709d6fb2254a605a0d39c72
+
+COCOAPODS: 1.8.3

@@ -1,0 +1,6 @@
+framework module Pods_LWAppMethodTimeConsuming_Example {
+  umbrella header "Pods-LWAppMethodTimeConsuming_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

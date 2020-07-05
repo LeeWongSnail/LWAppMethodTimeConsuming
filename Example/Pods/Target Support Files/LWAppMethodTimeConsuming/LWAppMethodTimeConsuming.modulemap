@@ -1,0 +1,6 @@
+framework module LWAppMethodTimeConsuming {
+  umbrella header "LWAppMethodTimeConsuming-umbrella.h"
+
+  export *
+  module * { export * }
+}
